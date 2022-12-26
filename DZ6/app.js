@@ -6,21 +6,21 @@
 // //   count += 1;
 // //   button.innerHTML = 'Плюс' + count;
 // // };
-
-var count = 0;
-function func() {
-    var decrement = document.getElementsByClassName("decrement");
-    var increment = document.getElementsByClassName("increment");
-    if (document.onclick = decrement) {
-        count--;
-        console.log(count);
-    } else if (document.onclick = increment) {
-        count++;
-        console.log(count);
-    }
-}
-let input = document.querySelector('input');
-console.log(input.value);
+//
+// var count = 0;
+// function func() {
+//     var decrement = document.getElementsByClassName("decrement");
+//     var increment = document.getElementsByClassName("increment");
+//     if (document.onclick = decrement) {
+//         count--;
+//         console.log(count);
+//     } else if (document.onclick = increment) {
+//         count++;
+//         console.log(count);
+//     }
+// }
+// let input = document.querySelector('input');
+// console.log(input.value);
 
 //  '.counter .decrement'.click(function() {
 //   let $input = $(this).parent().find('.quantity');
@@ -50,5 +50,23 @@ console.log(input.value);
 //     // this.textContent = counter1();
 //   });
 // }
+
+let counter = document.querySelector('.counter')
+
+for (let i = 0; i < counter.length; i++){
+    counter [i].onclick = function () {
+        let increment = this.querySelector('.increment')
+        let decrement = this.querySelector('.decrement')
+        let input = this.querySelector('.input')
+        let textFieldValue = +input.value;
+    }
+    increment.onclick = function () {
+        input.value = textFieldValue + 1;
+    }
+
+    decrement.onclick = function () {
+        input.value = textFieldValue - 1;
+    }
+}
 
 
